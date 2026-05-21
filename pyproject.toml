@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "ray-experiments"
+version = "0.1.0"
+description = "Ray distributed computing experiments"
+requires-python = ">=3.10"
+dependencies = [
+    "ray[data,train,tune,serve]",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
